@@ -1,0 +1,742 @@
+/* -- VARI´VEIS DE USO GLOBL CSS */
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: "Righteous";
+
+}
+
+:root {
+    --set-border-section: linear-gradient(90deg, rgb(110, 110, 110) 10%, rgb(255, 255, 255) 50%, rgb(110, 110, 110) 90%) 1;
+    --set-web-bg-color: linear-gradient(90deg, rgb(51, 51, 51) 10%, rgb(32, 231, 245) 50%, rgb(51, 51, 51) 90%);
+    --set-web-font-color: wheat;
+    --set-section-bg-color: linear-gradient(90deg, rgb(51, 51, 51) 10%, rgb(61, 61, 61) 50%, rgb(51, 51, 51) 90%);
+    --set-body-overflow : none;
+}
+
+/* -- VARI´VEIS DE USO GLOBL CSS */
+
+/* -- CONFIGURAÇAO DE TAG NAME MAIOR -- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: var(--set-web-bg-color);
+    height: auto;
+    overflow: var(--set-body-overflow);
+}
+
+/* -- CONFIGURAÇAO DE TAG NAME  MAIOR -- */
+
+
+/* -- BARRA DE NAVEGAÇÃO HEADER */
+.containner-nav-header {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8rem;
+    height: 8vh;
+    top: 0;
+    z-index: 999;
+}
+
+/* -- BARRA DE NAVEGAÇÃO HEADER */
+
+/* -- BARRA DE FOOTER */
+.footer {
+    height: 25vh;
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer * {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+.footer span {
+    color: grey;
+    font-size: 1.8rem;
+}
+
+.footer hr {
+    height: 60%;
+}
+
+.footer .copyright-section {
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.footer img {
+    height: 2rem;
+    margin-bottom: -.3rem;
+}
+
+/* -- BARRA DE FOOTER */
+
+/* -- LOGO -- */
+.containner-nav-header .image-content img {
+    height: 7rem;
+    margin: -1.5rem;
+    position: absolute;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.containner-nav-header .image-content img:hover {
+    transform: scale(1.2);
+    transition: all .3s;
+}
+
+/* -- LOGO -- */
+
+/* -- CONTAINER LINKS DE NAVEGAÇÃO */
+.containner-nav-header .inner-nav-header {
+    display: flex;
+    align-items: center;
+    font-size: 5rem;
+    justify-content: space-around;
+    width: 45rem;
+    font: bold;
+    font-family: 'Righteous';
+}
+
+.containner-nav-header .inner-nav-header li,
+.inner-nav-header a {
+    list-style: none;
+    text-decoration: none;
+    color: wheat
+}
+
+/* -- CONTAINER LINKS DE NAVEGAÇÃO */
+
+/* -- LAYOUT PADRÃO DAS SEÇÕES */
+.layout-section {
+    display: flex;
+    height: auto;
+    padding: 5rem 0;
+    margin: 10rem 5rem;
+    background-image: var(--set-section-bg-color);
+    align-items: center;
+    justify-content: center;
+    border: .1rem solid;
+    border-image: var(--set-border-section);
+
+}
+
+#home,
+#about,
+#project {
+    font-size: 20rem;
+    color: var(--set-web-font-color);
+}
+
+.inner-section {
+    padding: 0 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.tittle-section {
+    margin: 0 0 4rem 0;
+}
+
+/* -- LAYOUT PADRÃO DAS SEÇÕES */
+
+/*  -- ANCORAS PARA SECTIONS */
+#anchor-home,
+#anchor-about,
+#anchor-project {
+    position: relative;
+    top: -10rem;
+}
+
+/*  -- ANCORAS PARA SECTIONS */
+
+/*  -- CONFIGURAÇÃO DA SEÇÃO ABOUT-ME */
+.about-me-content{
+    overflow: hidden;
+}
+.about-me-content p,
+.about-me-content strong {
+    text-align: justify;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: 'Righteous';
+}
+
+/*  -- CONFIGURAÇÃO DA SEÇÃO ABOUT-ME */
+
+/*  -- CONFIGURAÇÃO DA SEÇÃO HOME -- */
+.home-content .tittle {
+    font-size: 6rem;
+    font-family: "Press Start 2P";
+}
+
+#type-effect {
+    height: 12rem;
+}
+
+.home-content .subtittle,
+.home-content .subtittle a {
+    color: var(--set-web-font-color);
+    font-family: "Righteous";
+    font-size: 3rem;
+    text-align: center;
+
+}
+
+/*  -- CONFIGURAÇÃO DA SEÇÃO HOME -- */
+
+/*  -- CARD DEMONSTRATIVO DE PROJETO -- */
+
+.card-projects-content {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+
+.project-card {
+    color: white;
+    position: relative;
+    width: 40rem;
+    max-width: 40%;
+    height: 40rem;
+    align-items: center;
+    margin: 3rem;
+}
+
+.project-card .demo-project-image {
+    position: relative;
+    border-radius: .5rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.project-card .info-project-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 5rem;
+}
+
+.project-card .demo-project-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+
+.project-card:hover .info-project-content {
+    opacity: 1;
+}
+
+.card-tittle-content h2,
+.card-tittle-content h3 {
+    cursor: pointer;
+
+}
+
+.project-card:hover .demo-project-image {
+    filter: brightness(0.3);
+}
+
+.project-card .card-tittle-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-card .card-tech-content li:nth-child(n) {
+    animation: pop-tech infinite .9s ease-out alternate-reverse;
+    animation-delay: calc(.5666666666666s * var(--i));
+    cursor: pointer;
+}
+
+.project-card .card-tech-content li span {
+    color: white;
+    padding: 1rem;
+    background-color: rgba(170, 170, 170, .5);
+    border-radius: 1rem;
+    position: absolute;
+    left: -1.5rem;
+    top: -3rem;
+    opacity: 0;
+}
+
+.project-card .card-tech-content li:hover span {
+    opacity: 1;
+    transition: opacity .5s .1s;
+}
+
+.project-card .card-tech-content {
+    display: flex;
+    font-size: 8rem;
+    gap: 1rem;
+    width: 60%;
+    list-style: none;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+
+/* -- CARD DEMONSTRATIVO DE PROJETO -- */
+/* -- CARD DEMONSTRATIVO DE PROJETO  FULLSCREEN-- */
+article .fade-fullscreen {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .7);
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    animation: fade .5s alternate;
+}
+
+article .fade-fullscreen .containner-fullscreen{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article .fade-fullscreen .fullscreen-inner-content {
+    background-color: rgb(189, 189, 189);
+    border: .2rem solid;
+    border-image: var(--set-border-section);
+    width: 80%;
+    height: 70vh;
+    display: flex;
+    padding: 1rem;
+}
+
+article .fade-fullscreen .image-content-fullscreen img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+article .fade-fullscreen .image-content-fullscreen{
+    width: 45%;
+    height: auto;
+    overflow: hidden;
+}
+article .fade-fullscreen .info-content-fullscreen{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+}
+.info-content-fullscreen *{
+    font-size: 2rem;
+    color: rgb(95, 95, 95);
+}
+article .fade-fullscreen .info-content-fullscreen .tittle-content h3{
+    margin-left: 2rem;
+    font-size: 70%;
+    opacity: .7;
+}
+article .fade-fullscreen .info-content-fullscreen .tittle-content{
+    width: 100%;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+article .containner-fullscreen .close-btn ion-icon{
+    background-color: white;
+    height: 3rem;
+    width: 3rem;
+    right: 5rem;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+}
+article .containner-fullscreen .close-btn{
+    width: 100%;
+    top: 2rem;
+    position: absolute;
+}
+
+.info-content-fullscreen .link-button-content, .info-content-fullscreen .tech-content-fullscreen{
+    background-color: gray;
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    cursor: pointer;
+}
+.info-content-fullscreen .link-button-content a{
+    text-decoration: none;
+    padding: 1rem 7rem;
+}
+
+/* -- CARD DEMONSTRATIVO DE PROJETO  FULLSCREEN-- */
+
+/* -- CONTAINER PAINEL DE CONTROLE -- */
+article .control-painel-containner {
+    position: fixed;
+    top: 5rem;
+    right: 4rem;
+    width: 18rem;
+    height: auto;
+}
+
+article .control-painel-containner .inner-control-painel {
+    background-image: var(--set-section-bg-color);
+    width: 100%;
+    height: 100%;
+    border: .2rem solid;
+    border-image: var(--set-border-section);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: space-evenly;
+
+}
+
+article .control-painel-containner .layout-c-painel {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+article .control-painel-containner .tittle {
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+article .control-painel-containner .tittle:hover {
+    color: silver;
+}
+
+/* -- CONTAINER PAINEL DE CONTROLE -- */
+
+/*  -- SESSÃO DO CONTROLADOR DE COR -- */
+.color-content {
+    cursor: pointer;
+    display: none;
+    background-color: rgba(194, 191, 191, 0.39);
+    transition: all 1s;
+    width: 2.4rem;
+    overflow: hidden;
+}
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.purple {
+    background-color: purple;
+}
+
+article .control-painel-containner .color-content .color {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: .5rem;
+    border: .1rem solid;
+    border-image: var(--set-border-section);
+}
+
+/*  -- SESSÃO DO CONTROLADOR DE COR -- */
+/* -- SESSÃO DO CONTROLADOR DE ÁUDIO */
+article .control-painel-containner .sound-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.audio-content {
+    display: none;
+    cursor: pointer;
+    transition: all 1s;
+    align-items: center;
+}
+
+article .control-painel-containner .audio-content button {
+    height: 2.5rem;
+    width: 2.5rem;
+    border: none;
+    font-size: 2rem;
+    border-radius: 50%;
+}
+
+/* -- SESSÃO DO CONTROLADOR DE ÁUDIO */
+/* -- CLASSES DE USABILIDADE -- */
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+/* -- CLASSES DE USABILIDADE -- */
+/*  -- EFEITO DE FADE -- */
+.fade {
+    opacity: 0;
+    position: absolute;
+    position: relative;
+    transform: translateY(20rem);
+    transition: all 1.2s ease;
+}
+
+.fade.bottom {
+    transform: translateY(-20rem);
+}
+
+.fade.left {
+    transform: translateY(0rem);
+    transform: translateX(20rem);
+}
+
+.fade.right {
+    transform: translateY(0rem);
+    transform: translateX(-20rem);
+}
+
+.fade.active {
+    opacity: 1;
+    transform: translateY(0rem);
+    transform: translateX(0rem);
+}
+
+.fade.active.delay {
+    -moz-transition-delay: .6s;
+    -o-transition-delay: .6s;
+    -webkit-transition-delay: .6s;
+    transition-delay: .6s;
+}
+
+.delay-1s {
+    -moz-transition-delay: 1s;
+    -o-transition-delay: 1s;
+    -webkit-transition-delay: 1s;
+    transition-delay: 1s;
+}
+
+.delay-2s {
+    -moz-transition-delay: 2s;
+    -o-transition-delay: 2s;
+    -webkit-transition-delay: 2s;
+    transition-delay: 2s;
+}
+
+.delay-3s {
+    -moz-transition-delay: 3s;
+    -o-transition-delay: 3s;
+    -webkit-transition-delay: 3s;
+    transition-delay: 3s;
+}
+
+/*  -- EFEITO DE FADE -- */
+
+@media screen and (min-width: 700px) and (max-width: 1079px) {
+    article .fade-fullscreen{
+        background-color: blue;
+    }
+    .card-projects-content .project-card {
+        display: flex;
+        min-width: 45%;
+        height: 40rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        transition: all 1s;
+        margin: 10rem 0;
+    }
+
+    .layout-section {
+        display: flex;
+        height: auto;
+        padding: 5rem;
+        margin: 10rem 5rem;
+        background-image: var(--set-section-bg-color);
+        align-items: center;
+        justify-content: center;
+        border: .2rem solid;
+        border-image: var(--set-border-section);
+
+    }
+
+    .inner-section {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .info-content-fullscreen .link-button-content, .info-content-fullscreen .tech-content-fullscreen{
+        background-color: gray;
+        padding: 2rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+        cursor: pointer;
+    }
+    .info-content-fullscreen .link-button-content a{
+        padding: 0;
+    }
+    .info-content-fullscreen .link-button-content button{
+        text-decoration: none;
+        padding: 0rem 10%;
+        margin-left: 1rem;
+    }
+    .info-content-fullscreen .description-content-fullscreen p{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 699px) {
+    article .fade-fullscreen{
+        background-color: green;
+    }
+    .card-projects-content .project-card {
+        display: flex;
+        min-width: 100%;
+        height: 30rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        transition: all 1s;
+        flex-grow: 1;
+        margin: 5rem 0;
+    }
+
+    .layout-section {
+        display: flex;
+        height: auto;
+        padding: 0 0 5rem 0;
+        margin: 12rem 0rem;
+        background-image: var(--set-section-bg-color);
+        align-items: center;
+        justify-content: center;
+        border: .1rem solid;
+        border-image: var(--set-border-section);
+    }
+
+    .inner-section {
+        padding: 0 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .info-content-fullscreen .link-button-content a{
+        padding:0rem;
+    }
+    .info-content-fullscreen .link-button-content{
+        padding: 1rem;
+        margin: .5rem;
+    }
+    .info-content-fullscreen .link-button-content button{
+        text-decoration: none;
+        padding: 0rem 10%;
+        margin-left: 1rem;
+    }
+    .info-content-fullscreen .description-content-fullscreen p{
+        font-size: 1.5rem;
+    }
+    article .fade-fullscreen .fullscreen-inner-content {
+        flex-direction: column;
+        background-color: rgb(189, 189, 189);
+        border: .2rem solid;
+        border-image: var(--set-border-section);
+        width: 80%;
+        height: 80vh;
+        display: flex;
+        padding: 1rem;
+    }
+    article .fade-fullscreen .image-content-fullscreen img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    
+    article .fade-fullscreen .image-content-fullscreen{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    article .fade-fullscreen .info-content-fullscreen{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 2rem;
+    }
+    
+
+}
+
+@keyframes pop-tech {
+    from {
+        transform: translateY(1.5rem);
+    }
+
+    to {
+        transform: translateY(0rem);
+    }
+}
+
+@keyframes fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

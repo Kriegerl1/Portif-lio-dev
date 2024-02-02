@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta name="author" content="Leonardo Rodrigues">
+    <meta name="description"
+        content="Meu nome é Leonardo Rodrigues, este é meu portfólio de Desenvolvedor, atualmente estou ampliando meus conhecimentos e buscando vagas para me desenvolver ainda melhor.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" type="image/png" href="./assets/scr/media/Logo.ico" size>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Raleway&family=Righteous&family=Source+Code+Pro&display=swap"
+        rel="stylesheet">
+    <title>Code Portfólio</title>
+
+<body>
+
+    <!--  TOPO CABEÇALHO NAVEGAÇÃO  -->
+    <header>
+        <div class="containner-nav-header">
+            <div class="image-content">
+                <img src="../Match/assets/media/images/Logo.png" alt="LOGO">
+            </div>
+            <div class="nav-header-content">
+                <nav class="inner-nav-header">
+                    <li><a href="#anchor-home"><ion-icon name="home">Inicio</ion-icon></a></li>
+                    <li><a href="#anchor-about"><ion-icon name="person-circle">Sobre mim</ion-icon></a></li>
+                    <li><a href="#anchor-project"><ion-icon name="rocket">Projetos</ion-icon></a></li>
+                    <li><a href="../assets/media/c_Leonardo-Rodrigues-Dev.pdf" download="Leo_Rodrigues_" ><ion-icon name="school">Currícnavo</ion-icon></a></li>
+                    <li><a href="//"><ion-icon name="cog" class="c-painel" onclick="hideClick()">Painel</ion-icon></a>
+                    </li>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--  TOPO CABEÇALHO NAVEGAÇÃO  -->
+
+    <main>
+        <section id="home">
+            <div id="anchor-home"></div>
+            <div class="layout-section"> <!-- CONFIGURAÇÃO PADRÃO DE SESSÃO -->
+                <div class="inner-section"> <!-- CONFIGURAÇÃO PADRÃO DE SESSÃO -->
+                    <h2 class="tittle-section">Inicio</h2> <!-- TUTULO DE SESSÃO -->
+
+
+                    <div class="home-content"> <!-- CONTAINER DE SAUDAÇÃO -->
+                        <h2 class="tittle" id="type-effect">
+                        </h2>
+                        <h3 class="subtittle">Eu sou "<a href="https://kriegerl1.github.io/Match-Repo/"
+                                class="krieger">Krieger</a>",<br>
+                            < /Desenvolvedor em formação.>
+                        </h3>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="about">
+            <div id="anchor-about"></div>
+
+            <div class="layout-section"> <!-- CONFIGURAÇÃO PADRÃO DE SESSÃO -->
+                <div class="inner-section"> <!-- CONFIGURAÇÃO PADRÃO DE SESSÃO -->
+                    <h2 class="tittle-section">Sobre mim</h2> <!--TITULO DE SESSÃO -->
+
+                    <!-- CONTAINER DE SOBRE MIM-->
+                    <div class="about-me-content">
+
+                        <p>
+                        <div class="fade">
+                            <p>Olá, eu sou <strong>Leonardo Rodrigues</strong>, mas você
+                                pode me chamar de
+                                <strong>Krieger</strong>. Tenho <strong>26 anos</strong> sou de <strong>Santa
+                                    Catarina</strong>,
+                                sou um entusiasta do mundo do <strong>desenvolvimento</strong>.
+                            </p>
+                        </div>
+
+                        <div class="fade delay-1s">
+                            <br>
+                            <p>Minha paixão é o desenvolvimento <strong>backend</strong>, onde busco aplicar com
+                                <strong>criatividade</strong> e
+                                <strong>inovação</strong> para construir soluções <strong>robustas</strong> e
+                                <strong>eficientes</strong>.
+                            </p>
+                        </div>
+
+                        <div class="fade delay-2s">
+                            <br>
+                            <p> Estou em constante busca por <strong>novos conhecimentos</strong> e
+                                <strong>desafios</strong>, sempre ansioso para explorar novas áreas de
+                                desenvolvimento.
+                                Acredito que a <strong>aprendizagem</strong> é uma jornada <strong>contínua</strong>
+                                e
+                                estou
+                                determinado a
+                                aplicar cada novo <strong>insight</strong> de maneira <strong>prática</strong>.
+                            </p>
+                        </div>
+
+                    </div>
+                    <!-- CONTAINER DE SOBRE MIM-->
+
+                </div> <!-- CONFIGURAÇÃO PADRÃO DE SESSÃO -->
+            </div> <!-- CONFIGURAÇÃO PADRÃO DE SESSÃO -->
+        </section>
+
+
+        <section id="project">
+            <div id="anchor-project"></div>
+
+            <div class="layout-section"> <!-- CONFIGURAÇÃO PADRÃO DE SESSÃO -->
+                <div class="inner-section"> <!-- CONFIGURAÇÃO PADRÃO DE SESSÃO -->
+                    <h2 class="tittle-section">Projetos</h2> <!-- TITULO DE SESSÃO -->
+
+                    <!-- CONTAINER DOS CARDS -->
+                    <div class="card-projects-content">
+
+
+                        <!-- PRIMEIRO CARD DE PROJETO PARA TESTE DE RESPONSIVIDADE -->
+                        <!-- <div class="project-card">
+                            <div class="demo-project-image">
+                                <img src="../Match/assets/media/images/image1.jpg" alt="IMG-CARD">
+                            </div>
+                            <div class="info-project-content">
+                                <div class="card-tittle-content">
+                                    <h2 class="tittle">CARD TITTLE 1</h2>
+                                    <h3 class="subtittle">CARD SUBTITTLE</h3>
+                                </div>
+                                <div class="card-tech-content">
+                                    <li class="tech" style="--i:0"><ion-icon
+                                            name="logo-css3"><span>CSS3</span></ion-icon></li>
+                                    <li class="tech" style="--i:1;"><ion-icon
+                                            name="logo-html5"><span>HTML5</span></ion-icon></li>
+                                    <li class="tech" style="--i:2;"><ion-icon
+                                            name="logo-javascript"><span>JAVASCRIPT</span></ion-icon></li>
+                                    <li class="tech" style="--i:3;"><ion-icon
+                                            name="logo-nodejs"><span>NODEJS</span></ion-icon></li>
+                                    <li class="tech" style="--i:4;"><ion-icon
+                                            name="logo-react"><span>REACT</span></ion-icon></li>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- PRIMEIRO CARD DE PROJETO PARA TESTE DE RESPONSIVIDADE -->
+                        <!-- SEGUNDO CARD DE PROJETO PARA TESTE DE RESPONSIVIDADE -->
+                        <!-- <div class="project-card">
+                            <div class="demo-project-image">
+                                <img src="../Match/assets/media/images/image1.jpg" alt="IMG-CARD">
+                            </div>
+                            <div class="info-project-content">
+                                <div class="card-tittle-content">
+                                    <h2 class="tittle">CARD TITTLE 1</h2>
+                                    <h3 class="subtittle">CARD SUBTITTLE</h3>
+                                </div>
+                                <div class="card-tech-content">
+                                    <li class="tech" style="--i:0"><ion-icon
+                                            name="logo-css3"><span>CSS3</span></ion-icon></li>
+                                    <li class="tech" style="--i:1;"><ion-icon
+                                            name="logo-html5"><span>HTML5</span></ion-icon></li>
+                                    <li class="tech" style="--i:2;"><ion-icon
+                                            name="logo-javascript"><span>JAVASCRIPT</span></ion-icon></li>
+                                    <li class="tech" style="--i:3;"><ion-icon
+                                            name="logo-nodejs"><span>NODEJS</span></ion-icon></li>
+                                    <li class="tech" style="--i:4;"><ion-icon
+                                            name="logo-react"><span>REACT</span></ion-icon></li>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- SEGUNDO CARD DE PROJETO PARA TESTE DE RESPONSIVIDADE -->
+                        <!-- TERCEIRO CARD DE PROJETO PARA TESTE DE RESPONSIVIDADE -->
+                        <!-- <div class="project-card">
+                            <div class="demo-project-image">
+                                <img src="../Match/assets/media/images/image1.jpg" alt="IMG-CARD">
+                            </div>
+                            <div class="info-project-content">
+                                <div class="card-tittle-content">
+                                    <h2 class="tittle">CARD TITTLE 1</h2>
+                                    <h3 class="subtittle">CARD SUBTITTLE</h3>
+                                </div>
+                                <div class="card-tech-content">
+                                    <li class="tech" style="--i:0"><ion-icon
+                                            name="logo-css3"><span>CSS3</span></ion-icon></li>
+                                    <li class="tech" style="--i:1;"><ion-icon
+                                            name="logo-html5"><span>HTML5</span></ion-icon></li>
+                                    <li class="tech" style="--i:2;"><ion-icon
+                                            name="logo-javascript"><span>JAVASCRIPT</span></ion-icon></li>
+                                    <li class="tech" style="--i:3;"><ion-icon
+                                            name="logo-nodejs"><span>NODEJS</span></ion-icon></li>
+                                    <li class="tech" style="--i:4;"><ion-icon
+                                            name="logo-react"><span>REACT</span></ion-icon></li>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- TERCEIRO CARD DE PROJETO PARA TESTE DE RESPONSIVIDADE -->
+
+                    </div>
+                    <!-- CONTAINER DOS CARDS -->
+
+                </div> <!-- CONFIGURAÇÃO PADRÃO DE SESSÃO -->
+            </div> <!-- CONFIGURAÇÃO PADRÃO DE SESSÃO -->
+        </section>
+    </main>
+    <!--  PAINEL DE CONTROLE GERAL -->
+    <article>
+        <div class="control-painel-containner hide">
+            <div class="inner-control-painel">
+
+                <div class="layout-c-painel">
+                    <div class="tittle-content">
+                        <h2 class="tittle color">Color</h2>
+                    </div>
+                    <div class="color-content">
+                        <li>
+                            <div class="color red"></div>
+                        </li>
+                        <li>
+                            <div class="color blue"></div>
+                        </li>
+                        <li>
+                            <div class="color green"></div>
+                        </li>
+                        <li>
+                            <div class="color purple"></div>
+                        </li>
+                        <li>
+                            <div class="color yellow"></div>
+                        </li>
+
+                    </div>
+                </div>
+
+                <div class="layout-c-painel">
+                    <div class="sound-content">
+                        <div class="tittle-content">
+                            <h2 class="tittle audio">Audio</h2>
+                        </div>
+                        <div class="audio-content">
+                            <button class="play-btn"> > </button>
+                            <button class="vol-up"> + </button>
+                            <button class="vol-down"> - </button>
+                            <audio src="#"></audio>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+    <!--  PAINEL DE CONTROLE GERAL -->
+    <article class="fullscreen">
+       
+    </article>
+
+    <footer>
+        <div class="footer">
+            <div class="contact-section">
+                <div class="email-content">
+                    <ion-icon name="letter">Email</ion-icon>
+                    <h3 class="contact-link">
+                        <a href="mailto:leokrodrigues@gmail.com">Leonardo R.</a><span>@gmail.com</span>
+                    </h3>
+                </div>
+                <div class="whatssap-content">
+                    <ion-icon name="whatsapp-logo">Whatsapp</ion-icon>
+                    <h3 class="contact-link"><a
+                            href="https://wa.me/send/?phone=5549998076236&text='Olá, estou entrando em contato, pelo link do seu portifólio.'&type=phone_number&app_absent=0" target="_blank">(49)
+                            9 9807-6236</a> Leonardo R.</h3>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright-section">
+                <p>Copyright &copy; 2023 <a rel="reopensite" href="https://kriegerl1.github.io/Match-Repo/"><img
+                            src="../Match/assets/media/images/Logo.png" alt="">eonardo
+                        "Krieger" Rodrigues</a> -
+                    Desenvolvedor em formação.</p>
+                <div>
+                    <p>Siga-me
+                        <a href="http://www.linkedin.com/in/leokrodrigues" target="_blank"><ion-icon
+                                name="logo-linkedin"></ion-icon></a>
+                        <a href="https://github.com/Kriegerl1" target="_blank"><ion-icon
+                                name="logo-github"></ion-icon></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="./assets/scr/js/js.js"></script>
+<script src="https://unpkg.com/ioniconslatest/dist/ionicons.js"></script>
+
+</html>
