@@ -9,11 +9,12 @@
 }
 
 :root {
+    --set-web-color-p: rgb(30, 30, 30);
     --set-border-section: linear-gradient(90deg, rgb(110, 110, 110) 10%, rgb(255, 255, 255) 50%, rgb(110, 110, 110) 90%) 1;
     --set-web-bg-color: linear-gradient(90deg, rgb(51, 51, 51) 10%, rgb(32, 231, 245) 50%, rgb(51, 51, 51) 90%);
     --set-web-font-color: wheat;
     --set-section-bg-color: linear-gradient(90deg, rgb(51, 51, 51) 10%, rgb(61, 61, 61) 50%, rgb(51, 51, 51) 90%);
-    --set-body-overflow : none;
+    --set-body-overflow: none;
 }
 
 /* -- VARI´VEIS DE USO GLOBL CSS */
@@ -26,6 +27,7 @@ html {
 body {
     background-image: var(--set-web-bg-color);
     height: auto;
+    margin-bottom: 35vh;
     overflow: var(--set-body-overflow);
 }
 
@@ -37,28 +39,30 @@ body {
     position: fixed;
     width: 100%;
     height: auto;
-    background-color: rgb(30, 30, 30);
+    background-color: var(--set-web-color-p);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 8rem;
     height: 8vh;
     top: 0;
-    z-index: 999;
+    z-index: 998;
 }
 
 /* -- BARRA DE NAVEGAÇÃO HEADER */
 
 /* -- BARRA DE FOOTER */
 .footer {
+    position: absolute;
+    width: 100%;
     height: 25vh;
-    background-color: rgb(30, 30, 30);
+    background-color: var(--set-web-color-p);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.footer * {
+footer * {
     font-size: 1.5rem;
     color: white;
     text-decoration: none;
@@ -68,6 +72,7 @@ body {
     color: grey;
     font-size: 1.8rem;
 }
+
 
 .footer hr {
     height: 60%;
@@ -81,16 +86,21 @@ body {
 }
 
 .footer img {
-    height: 2rem;
-    margin-bottom: -.3rem;
+    height: 5rem;
+    margin: -1.5rem -1rem;
 }
 
 /* -- BARRA DE FOOTER */
+/*   ION-ICONS */
+ion-icon {
+    font-size: 3rem;
+}
 
+/*   ION-ICONS */
 /* -- LOGO -- */
 .containner-nav-header .image-content img {
-    height: 7rem;
-    margin: -1.5rem;
+    height: 12rem;
+    margin-top: -3rem;
     position: absolute;
     transition: all .3s;
     cursor: pointer;
@@ -118,6 +128,7 @@ body {
 .inner-nav-header a {
     list-style: none;
     text-decoration: none;
+    font-size: 6rem;
     color: wheat
 }
 
@@ -169,9 +180,10 @@ body {
 /*  -- ANCORAS PARA SECTIONS */
 
 /*  -- CONFIGURAÇÃO DA SEÇÃO ABOUT-ME */
-.about-me-content{
+.about-me-content {
     overflow: hidden;
 }
+
 .about-me-content p,
 .about-me-content strong {
     text-align: justify;
@@ -214,14 +226,25 @@ body {
     justify-content: space-around;
 }
 
+.project-card:hover {
+    height: 30rem;
+    transition: 1.5s;
+
+}
+
 .project-card {
+    cursor: pointer;
     color: white;
     position: relative;
     width: 40rem;
     max-width: 40%;
-    height: 40rem;
+    height: 20rem;
     align-items: center;
+    background-image: var(--set-section-bg-color);
+    border-radius: 1rem;
     margin: 3rem;
+    transition: 1.5s;
+    margin-bottom: 20rem;
 }
 
 .project-card .demo-project-image {
@@ -310,9 +333,56 @@ body {
 }
 
 /* -- CARD DEMONSTRATIVO DE PROJETO -- */
+/* -- FILL DE TECHS -- */
+ion-icon[name='logo-css3'] {
+    fill: #1572B6;
+    /* Cor padrão do CSS */
+}
+
+ion-icon[name='logo-html5'] {
+    fill: #E34F26;
+    /* Cor padrão do HTML5 */
+}
+
+ion-icon[name='logo-javascript'] {
+    fill: #F7DF1E;
+    /* Cor padrão do JavaScript */
+}
+
+ion-icon[name='logo-react'] {
+    fill: #61DAFB;
+    /* Cor padrão do React */
+}
+
+ion-icon[name='logo-github'] {
+    fill: #181717;
+    /* Cor padrão do GitHub */
+}
+
+ion-icon[name='logo-facebook'] {
+    fill: #1877F2;
+    /* Cor padrão do Facebook */
+}
+
+ion-icon[name='logo-instagram'] {
+    fill: #E4405F;
+    /* Cor padrão do Instagram */
+}
+
+ion-icon[name='logo-whatsapp'] {
+    fill: #25D366;
+    /* Cor padrão do WhatsApp */
+}
+ion-icon[name='logo-nodejs'] {
+    fill: #68A063;
+     /* Cor padrão do Node.js */
+}
+
+
+/* -- FILL DE TECHS -- */
 /* -- CARD DEMONSTRATIVO DE PROJETO  FULLSCREEN-- */
 article .fade-fullscreen {
-    z-index: 999;
+    z-index: 998;
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -324,7 +394,7 @@ article .fade-fullscreen {
     animation: fade .5s alternate;
 }
 
-article .fade-fullscreen .containner-fullscreen{
+article .fade-fullscreen .containner-fullscreen {
     width: 100%;
     height: 100%;
     display: flex;
@@ -342,35 +412,55 @@ article .fade-fullscreen .fullscreen-inner-content {
     padding: 1rem;
 }
 
-article .fade-fullscreen .image-content-fullscreen img{
+article .fade-fullscreen .image-content-fullscreen img {
     object-fit: cover;
-    width: 100%;
+    width: 60rem;
     height: 100%;
 }
 
-article .fade-fullscreen .image-content-fullscreen{
-    width: 45%;
-    height: auto;
-    overflow: hidden;
+article .fade-fullscreen .image-content-fullscreen img:hover {
+    position: absolute;
+    width: 78%;
+    height: 65%;
+    top: 17.5%;
+    left: 11%;
+    transition: width 1s;
+    border-radius: 1rem;
+    z-index: 999;
 }
-article .fade-fullscreen .info-content-fullscreen{
+
+article .fade-fullscreen .image-content-fullscreen {
+    width: 45%;
+    /* Define a largura da imagem em relação ao container */
+    height: auto;
+    /* Ajusta a altura automaticamente */
+    overflow: visible;
+    /* Garante que qualquer parte da imagem fora do container seja visível */
+}
+
+
+article .fade-fullscreen .info-content-fullscreen {
     width: 55%;
+    background-color: rgb(189, 189, 189);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     padding: 2rem;
 }
-.info-content-fullscreen *{
+
+.info-content-fullscreen * {
     font-size: 2rem;
     color: rgb(95, 95, 95);
 }
-article .fade-fullscreen .info-content-fullscreen .tittle-content h3{
+
+article .fade-fullscreen .info-content-fullscreen .tittle-content h3 {
     margin-left: 2rem;
     font-size: 70%;
     opacity: .7;
 }
-article .fade-fullscreen .info-content-fullscreen .tittle-content{
+
+article .fade-fullscreen .info-content-fullscreen .tittle-content {
     width: 100%;
     margin-left: 1rem;
     display: flex;
@@ -378,22 +468,34 @@ article .fade-fullscreen .info-content-fullscreen .tittle-content{
     justify-content: flex-start;
 }
 
-article .containner-fullscreen .close-btn ion-icon{
-    background-color: white;
-    height: 3rem;
-    width: 3rem;
+article .containner-fullscreen .tech-content-fullscreen ion-icon:hover {
+    scale: 1.2;
+    transition: all .3s;
+}
+
+article .containner-fullscreen .tech-content-fullscreen ion-icon {
     right: 5rem;
+    font-size: 5rem;
+    transition: all .1s;
+    color: white;
+}
+
+article .containner-fullscreen .close-btn ion-icon {
+    right: 5rem;
+    font-size: 5rem;
+    color: white;
     position: absolute;
     cursor: pointer;
-    border-radius: 50%;
 }
-article .containner-fullscreen .close-btn{
+
+article .containner-fullscreen .close-btn {
     width: 100%;
     top: 2rem;
     position: absolute;
 }
 
-.info-content-fullscreen .link-button-content, .info-content-fullscreen .tech-content-fullscreen{
+.info-content-fullscreen .link-button-content,
+.info-content-fullscreen .tech-content-fullscreen {
     background-color: gray;
     padding: 2rem;
     width: 100%;
@@ -403,7 +505,8 @@ article .containner-fullscreen .close-btn{
     list-style: none;
     cursor: pointer;
 }
-.info-content-fullscreen .link-button-content a{
+
+.info-content-fullscreen .link-button-content a {
     text-decoration: none;
     padding: 1rem 7rem;
 }
@@ -459,6 +562,7 @@ article .control-painel-containner .tittle:hover {
     width: 2.4rem;
     overflow: hidden;
 }
+
 .red {
     background-color: red;
 }
@@ -502,10 +606,17 @@ article .control-painel-containner .sound-content {
     align-items: center;
 }
 
+article .control-painel-containner .audio-content ion-icon {
+    font-size: 2.5rem;
+}
+
 article .control-painel-containner .audio-content button {
-    height: 2.5rem;
-    width: 2.5rem;
     border: none;
+    margin: 0.5rem;
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 2rem;
     border-radius: 50%;
 }
@@ -579,11 +690,22 @@ article .control-painel-containner .audio-content button {
 }
 
 /*  -- EFEITO DE FADE -- */
+/*  -- EFEITO DISABLE */
 
+.disable * {
+    filter: blur(.3rem) saturate(30%) contrast(90%);
+    cursor: context-menu;
+}
+
+.disable:hover * {
+    cursor: context-menu;
+}
+
+
+/*  -- EFEITO DISABLE */
 @media screen and (min-width: 700px) and (max-width: 1079px) {
-    article .fade-fullscreen{
-        background-color: blue;
-    }
+
+
     .card-projects-content .project-card {
         display: flex;
         min-width: 45%;
@@ -615,7 +737,9 @@ article .control-painel-containner .audio-content button {
         align-items: center;
         width: 100%;
     }
-    .info-content-fullscreen .link-button-content, .info-content-fullscreen .tech-content-fullscreen{
+
+    .info-content-fullscreen .link-button-content,
+    .info-content-fullscreen .tech-content-fullscreen {
         background-color: gray;
         padding: 2rem;
         width: 100%;
@@ -625,24 +749,29 @@ article .control-painel-containner .audio-content button {
         list-style: none;
         cursor: pointer;
     }
-    .info-content-fullscreen .link-button-content a{
+
+    .info-content-fullscreen .link-button-content a {
         padding: 0;
     }
-    .info-content-fullscreen .link-button-content button{
+
+    .info-content-fullscreen .link-button-content button {
         text-decoration: none;
         padding: 0rem 10%;
         margin-left: 1rem;
     }
-    .info-content-fullscreen .description-content-fullscreen p{
+
+    .info-content-fullscreen .description-content-fullscreen p {
         font-size: 1.5rem;
+    }
+
+    article .fade-fullscreen .image-content-fullscreen img {
+        width: 40rem;
     }
 
 }
 
 @media screen and (min-width: 0px) and (max-width: 699px) {
-    article .fade-fullscreen{
-        background-color: green;
-    }
+
     .card-projects-content .project-card {
         display: flex;
         min-width: 100%;
@@ -674,21 +803,26 @@ article .control-painel-containner .audio-content button {
         align-items: center;
         width: 100%;
     }
-    .info-content-fullscreen .link-button-content a{
-        padding:0rem;
+
+    .info-content-fullscreen .link-button-content a {
+        padding: 0rem;
     }
-    .info-content-fullscreen .link-button-content{
+
+    .info-content-fullscreen .link-button-content {
         padding: 1rem;
         margin: .5rem;
     }
-    .info-content-fullscreen .link-button-content button{
+
+    .info-content-fullscreen .link-button-content button {
         text-decoration: none;
         padding: 0rem 10%;
         margin-left: 1rem;
     }
-    .info-content-fullscreen .description-content-fullscreen p{
+
+    .info-content-fullscreen .description-content-fullscreen p {
         font-size: 1.5rem;
     }
+
     article .fade-fullscreen .fullscreen-inner-content {
         flex-direction: column;
         background-color: rgb(189, 189, 189);
@@ -699,26 +833,34 @@ article .control-painel-containner .audio-content button {
         display: flex;
         padding: 1rem;
     }
-    article .fade-fullscreen .image-content-fullscreen img{
+
+    article .fade-fullscreen .image-content-fullscreen img:hover {
         object-fit: cover;
-        width: 100%;
+        width: 77%;
+        height: 70%;
+    }
+    article .fade-fullscreen .image-content-fullscreen img {
+        object-fit: cover;
+        width: 40rem;
         height: 100%;
     }
-    
-    article .fade-fullscreen .image-content-fullscreen{
+
+    article .fade-fullscreen .image-content-fullscreen {
         width: 100%;
         height: auto;
         overflow: hidden;
     }
-    article .fade-fullscreen .info-content-fullscreen{
+
+    article .fade-fullscreen .info-content-fullscreen {
         width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
         padding: 2rem;
     }
-    
+
 
 }
 
@@ -733,10 +875,11 @@ article .control-painel-containner .audio-content button {
 }
 
 @keyframes fade {
-    from{
+    from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
     }
 }

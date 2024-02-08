@@ -120,34 +120,37 @@ window.addEventListener('load', pageLoad);
 let cardContainer = document.querySelector('.card-projects-content')
 let cardFullscreen = document.querySelector('.fullscreen')
 
-let card = [
+const card = [
     {
         id: 1,
         nome: 'LandPage',
         subtitulo: 'Redirecionador de vendas',
         info: 'Este projeto foi utilizado apenas Html, CSS e Javascript, com estilização simples e responsividade. Foram adicionados links para redes sociais e cards para compra de produtos.',
-        image: 'image1.jpg',
-        repositorio: 'http://www.github.com/Kriegerl1',
-        deploy: 'http://www.deploydo.site.com',
-        tecnologias: ['logo-css3', 'logo-html5', 'logo-javascript']
+        image: 'D-ribas-personal.jpg',
+        repositorio: 'https://github.com/Kriegerl1/drrPersonalSite',
+        deploy: 'https://drrpersonal.netlify.app/',
+        tecnologias: ['css3', 'html5', 'javascript'],
+        status: 'enable'
     }, {
         id: 2,
-        nome: 'Card projeto 2',
-        subtitulo: 'Subtitulo do card 2',
-        info: 'Card projeto 2 com Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consequatur amet quis dolorem blanditiis voluptates maiores quo placeat alias, omnis atque nihil delectus provident autem aut accusamus.',
-        image: 'image2.jpg',
-        repositorio: 'http://www.github.com/Kriegerl1',
+        nome: 'Desafio 1',
+        subtitulo: 'Seletivo Academia de programação',
+        info: 'Desenvolvido para o processo seletivo da Academia de Programação, este aplicativo simples permite aos usuários determinar o tipo de triângulo com base nos comprimentos dos lados fornecidos. Com uma interface intuitiva, o usuário insere os comprimentos dos lados e recebe instantaneamente uma classificação do triângulo como equilátero, isósceles ou escaleno. Além disso, o aplicativo verifica se os lados fornecidos formam um triângulo válido. É uma ferramenta prática e eficiente para identificar triângulos.',
+        image: 'P-Chall-AP-1.jpg',
+        repositorio: 'https://github.com/Kriegerl1/Chall1AcadProgram',
         deploy: 'http://www.deploydo.site.com',
-        tecnologias: ['react', 'logo-css3', 'logo-html5', 'logo-javascript',]
+        tecnologias: ['css3', 'html5', 'javascript'],
+        status: 'enable'
     }, {
         id: 3,
         nome: 'Card projeto 3',
         subtitulo: 'Subtitulo do card 3',
         info: 'Card projeto 3 com Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consequatur amet quis dolorem blanditiis voluptates maiores quo placeat alias, omnis atque nihil delectus provident autem aut accusamus.',
-        image: 'image3.jpg',
-        repositorio: 'http://www.github.com/Kriegerl1',
+        image: 'P-Chall-AP-2.jpg',
+        repositorio: 'https://github.com/Kriegerl1/Chall2AcadProgram',
         deploy: 'http://www.deploydo.site.com',
-        tecnologias: ['react', 'logo-css3', 'logo-html5', 'logo-javascript']
+        tecnologias: ['nodejs', 'css3', 'html5', 'javascript'],
+        status: 'enable'
     }, {
         id: 4,
         nome: 'Card projeto 4',
@@ -156,7 +159,8 @@ let card = [
         image: 'image4.jpg',
         repositorio: 'http://www.github.com/Kriegerl1',
         deploy: 'http://www.deploydo.site.com',
-        tecnologias: ['react', 'logo-css3', 'logo-html5', 'logo-javascript']
+        tecnologias: [''],
+        status: 'disable'
     }, {
         id: 5,
         nome: 'Card projeto 5',
@@ -165,7 +169,8 @@ let card = [
         image: 'image3.jpg',
         repositorio: 'http://www.github.com/Kriegerl1',
         deploy: 'http://www.deploydo.site.com',
-        tecnologias: ['react', 'logo-css3', 'logo-html5', 'logo-javascript']
+        tecnologias: [''],
+        status: 'disable'
     }, {
         id: 6,
         nome: 'Card projeto 6',
@@ -174,18 +179,20 @@ let card = [
         image: 'image2.jpg',
         repositorio: 'http://www.github.com/Kriegerl1',
         deploy: 'http://www.deploydo.site.com',
-        tecnologias: ['react', 'logo-css3', 'logo-html5', 'logo-javascript']
+        tecnologias: [''],
+        status: 'disable'
     }
 ]
 
 function openFullscreenCard(value) {
+
     let newCardFullscreen = document.createElement('div');
     newCardFullscreen.classList.add('fade-fullscreen');
 
     let tech = '';
     for (let i = 0; i < value.tecnologias.length; i++) {
         let arrayDeTechs = value.tecnologias[i];
-        tech += `<ion-icon name="${arrayDeTechs}">@</ion-icon>`;
+        tech += `<ion-icon name="logo-${arrayDeTechs}">@</ion-icon>`;
     }
 
     newCardFullscreen.innerHTML = `
@@ -216,21 +223,21 @@ function openFullscreenCard(value) {
         </div>
     </div>
     `;
-    
+
     cardFullscreen.innerHTML = ''; // Limpa o conteúdo anterior
     cardFullscreen.appendChild(newCardFullscreen);
-    
+
     // Evento para fechar Projetos em fullscreen.
-    
+
     let closeFullscreen = document.querySelector('.close-btn'); //Target do botão de fechar fullscreen.
-    
-    document.body.style.setProperty('--set-body-overflow',' hidden');
+
+    document.body.style.setProperty('--set-body-overflow', ' hidden');
     closeFullscreen.addEventListener('click', (event) => {
         let target = document.querySelector('.fade-fullscreen')
 
         if (!target.classList.contains('hide')) {
             target.classList.add('hide')
-    document.body.style.setProperty('--set-body-overflow',' none');
+            document.body.style.setProperty('--set-body-overflow', ' none');
 
         }
     });
@@ -242,15 +249,16 @@ function initCards() {
     card.forEach((value) => {
         let newCard = document.createElement('div');
         newCard.classList.add('project-card');
+        newCard.classList.add(`${value.status}`);
 
         let tech = '';
         for (let i = 0; i < value.tecnologias.length; i++) {
             let arrayDeTechs = value.tecnologias[i];
-            tech += `<li class="tech" style="--i:${tech[i]}"><ion-icon name="${arrayDeTechs}"><span>${arrayDeTechs}</span></ion-icon></li>`;
+            tech += `<li class="tech" style="--i:${i}"><ion-icon name="logo-${arrayDeTechs}"></ion-icon><span>${arrayDeTechs.toUpperCase()}</span></li>`;
         }
 
         newCard.innerHTML = `
-        <div class="demo-project-image">
+        <div class="demo-project-image" ${value.status}>
         <img src="./assets/scr/media/${value.image}" alt="IMG-CARD">
     </div>
     <div class="info-project-content">
@@ -265,8 +273,11 @@ function initCards() {
         `;
 
         // Adicione um ouvinte de clique ao novo card
+
         newCard.addEventListener('click', () => {
-            openFullscreenCard(value);
+            if (value.status !== "disable") {
+                openFullscreenCard(value);
+            }
         });
 
         cardContainer.appendChild(newCard);
@@ -277,3 +288,25 @@ initCards();
 
 // Iniciador de cards de projeto e fullscreen
 
+// Controlador de música ambiente
+let audio = document.getElementById("control-sound");
+audio.volume = 0.1;
+
+function playSound() {
+    if (audio.muted) {
+        document.querySelector('.play-btn ion-icon').name = "pause-outline";
+    } else {
+        document.querySelector('.play-btn ion-icon').name = "play-outline";
+    }
+    audio.muted = !audio.muted;
+}
+
+function plussSound() {
+    audio.volume += 0.1;
+}
+
+function lessSound() {
+    audio.volume -= 0.1;
+}
+
+// Controlador de música ambiente

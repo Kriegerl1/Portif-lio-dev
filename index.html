@@ -22,14 +22,17 @@
     <header>
         <div class="containner-nav-header">
             <div class="image-content">
-                <img src="../Match/assets/media/images/Logo.png" alt="LOGO">
+                <a href="https://www.linkedin.com/in/leokrodrigues/" target="_blank" rel="noopener noreferrer"><img
+                        src="./assets/scr/media/Logo.png" alt="LOGO"></a>
+
             </div>
             <div class="nav-header-content">
                 <nav class="inner-nav-header">
                     <li><a href="#anchor-home"><ion-icon name="home">Inicio</ion-icon></a></li>
                     <li><a href="#anchor-about"><ion-icon name="person-circle">Sobre mim</ion-icon></a></li>
                     <li><a href="#anchor-project"><ion-icon name="rocket">Projetos</ion-icon></a></li>
-                    <li><a href="../assets/media/c_Leonardo-Rodrigues-Dev.pdf" download="Leo_Rodrigues_" ><ion-icon name="school">Currícnavo</ion-icon></a></li>
+                    <li><a href="../assets/media/c_Leonardo-Rodrigues-Dev.pdf" download="Leo_Rodrigues_"><ion-icon
+                                name="school">Currícnavo</ion-icon></a></li>
                     <li><a href="//"><ion-icon name="cog" class="c-painel" onclick="hideClick()">Painel</ion-icon></a>
                     </li>
                 </nav>
@@ -242,10 +245,12 @@
                             <h2 class="tittle audio">Audio</h2>
                         </div>
                         <div class="audio-content">
-                            <button class="play-btn"> > </button>
-                            <button class="vol-up"> + </button>
-                            <button class="vol-down"> - </button>
-                            <audio src="#"></audio>
+                            <button onclick="plussSound()" class="vol-up"><ion-icon name="add-outline"></ion-icon></button>
+                            <button onclick="playSound()" class="play-btn"><ion-icon name="play-outline"></ion-icon></button>
+                            <button onclick="lessSound()" class="vol-down"><ion-icon name="remove-outline"></ion-icon></button>
+                            <audio autoplay muted loop id="control-sound">
+                                <source src="./assets/scr/media/audio/Lawrence - TrackTribe.mp3" >
+                            </audio>
                         </div>
                     </div>
                 </div>
@@ -255,29 +260,30 @@
     </article>
     <!--  PAINEL DE CONTROLE GERAL -->
     <article class="fullscreen">
-       
+
     </article>
 
     <footer>
         <div class="footer">
             <div class="contact-section">
                 <div class="email-content">
-                    <ion-icon name="letter">Email</ion-icon>
+                    <ion-icon name="mail-outline" style="color:rgb(255, 93, 93)"></ion-icon>Email
                     <h3 class="contact-link">
                         <a href="mailto:leokrodrigues@gmail.com">Leonardo R.</a><span>@gmail.com</span>
                     </h3>
                 </div>
                 <div class="whatssap-content">
-                    <ion-icon name="whatsapp-logo">Whatsapp</ion-icon>
+                    <ion-icon name="logo-whatsapp" style="color:rgb(37, 211, 102)"></ion-icon>Whatsapp
                     <h3 class="contact-link"><a
-                            href="https://wa.me/send/?phone=5549998076236&text='Olá, estou entrando em contato, pelo link do seu portifólio.'&type=phone_number&app_absent=0" target="_blank">(49)
+                            href="https://wa.me/send/?phone=5549998076236&text='Olá, estou entrando em contato, pelo link do seu Footer.'&type=phone_number&app_absent=0"
+                            target="_blank">(49)
                             9 9807-6236</a> Leonardo R.</h3>
                 </div>
             </div>
             <hr>
             <div class="copyright-section">
                 <p>Copyright &copy; 2023 <a rel="reopensite" href="https://kriegerl1.github.io/Match-Repo/"><img
-                            src="../Match/assets/media/images/Logo.png" alt="">eonardo
+                            src="./assets/scr/media/Logo.png" alt="">eonardo
                         "Krieger" Rodrigues</a> -
                     Desenvolvedor em formação.</p>
                 <div>
@@ -294,6 +300,7 @@
 </body>
 
 <script src="./assets/scr/js/js.js"></script>
-<script src="https://unpkg.com/ioniconslatest/dist/ionicons.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </html>
