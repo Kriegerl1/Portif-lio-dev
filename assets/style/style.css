@@ -5,8 +5,6 @@
     font-size: 62.5%;
     box-sizing: border-box;
     font-family: "Righteous";
-    overflow-x: hidden;
-
 }
 
 :root {
@@ -23,6 +21,8 @@
 /* -- CONFIGURAÇAO DE TAG NAME MAIOR -- */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+
 }
 
 body {
