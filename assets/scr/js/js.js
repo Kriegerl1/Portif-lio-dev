@@ -288,6 +288,23 @@ initCards();
 
 // Iniciador de cards de projeto e fullscreen
 
+// Menu burguer
+let menuBurguer = document.querySelector('.r-menu-btn');
+
+menuBurguer.addEventListener('click', (event) => {
+    let target = document.querySelector('.nav-header-content');
+
+    if (target.classList.contains('show')) {
+        target.classList.remove('show');
+        document.querySelector('.r-menu-btn ion-icon').name = "menu-outline";
+    } else {
+        target.classList.add('show');
+        document.querySelector('.r-menu-btn ion-icon').name = "return-down-forward-outline";
+    }
+});
+
+// Menu burguer
+
 // Controlador de música ambiente
 let audio = document.getElementById("control-sound");
 audio.volume = 0.1;

@@ -29,14 +29,19 @@
             <div class="nav-header-content">
                 <nav class="inner-nav-header">
                     <li><a href="#anchor-home"><ion-icon name="home">Inicio</ion-icon></a></li>
+
                     <li><a href="#anchor-about"><ion-icon name="person-circle">Sobre mim</ion-icon></a></li>
+
                     <li><a href="#anchor-project"><ion-icon name="rocket">Projetos</ion-icon></a></li>
+
                     <li><a href="../assets/media/c_Leonardo-Rodrigues-Dev.pdf" download="Leo_Rodrigues_"><ion-icon
                                 name="school">Currícnavo</ion-icon></a></li>
+
                     <li><a href="//"><ion-icon name="cog" class="c-painel" onclick="hideClick()">Painel</ion-icon></a>
                     </li>
                 </nav>
             </div>
+            <span class="r-menu-btn"><ion-icon name="menu-outline"></ion-icon></span>
         </div>
     </header>
     <!--  TOPO CABEÇALHO NAVEGAÇÃO  -->
@@ -46,7 +51,7 @@
             <div id="anchor-home"></div>
             <div class="layout-section"> <!-- CONFIGURAÇÃO PADRÃO DE SESSÃO -->
                 <div class="inner-section"> <!-- CONFIGURAÇÃO PADRÃO DE SESSÃO -->
-                    <h2 class="tittle-section">Inicio</h2> <!-- TUTULO DE SESSÃO -->
+                    <h2 style="opacity: 0" class="tittle-section">Inicio</h2> <!-- TUTULO DE SESSÃO -->
 
 
                     <div class="home-content"> <!-- CONTAINER DE SAUDAÇÃO -->
@@ -217,7 +222,7 @@
 
                 <div class="layout-c-painel">
                     <div class="tittle-content">
-                        <h2 class="tittle color">Color</h2>
+                        <h2 class="tittle color" style="display: none;">Color</h2>
                     </div>
                     <div class="color-content">
                         <li>
@@ -245,11 +250,14 @@
                             <h2 class="tittle audio">Audio</h2>
                         </div>
                         <div class="audio-content">
-                            <button onclick="plussSound()" class="vol-up"><ion-icon name="add-outline"></ion-icon></button>
-                            <button onclick="playSound()" class="play-btn"><ion-icon name="play-outline"></ion-icon></button>
-                            <button onclick="lessSound()" class="vol-down"><ion-icon name="remove-outline"></ion-icon></button>
+                            <button onclick="plussSound()" class="vol-up"><ion-icon
+                                    name="add-outline"></ion-icon></button>
+                            <button onclick="playSound()" class="play-btn"><ion-icon
+                                    name="play-outline"></ion-icon></button>
+                            <button onclick="lessSound()" class="vol-down"><ion-icon
+                                    name="remove-outline"></ion-icon></button>
                             <audio autoplay muted loop id="control-sound">
-                                <source src="./assets/scr/media/audio/Lawrence - TrackTribe.mp3" >
+                                <source src="./assets/scr/media/audio/Lawrence - TrackTribe.mp3">
                             </audio>
                         </div>
                     </div>
@@ -284,10 +292,10 @@
             <div class="copyright-section">
                 <p>Copyright &copy; 2023 <a rel="reopensite" href="https://kriegerl1.github.io/Match-Repo/"><img
                             src="./assets/scr/media/Logo.png" alt="">eonardo
-                        "Krieger" Rodrigues</a> -
-                    Desenvolvedor em formação.</p>
+                        "Krieger" Rodrigues.</a><span> -
+                        Desenvolvedor em formação.</span></p>
                 <div>
-                    <p>Siga-me
+                    <p class="contact-link">Siga-me
                         <a href="http://www.linkedin.com/in/leokrodrigues" target="_blank"><ion-icon
                                 name="logo-linkedin"></ion-icon></a>
                         <a href="https://github.com/Kriegerl1" target="_blank"><ion-icon

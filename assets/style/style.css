@@ -38,13 +38,12 @@ body {
 .containner-nav-header {
     position: fixed;
     width: 100%;
-    height: auto;
     background-color: var(--set-web-color-p);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 8rem;
-    height: 8vh;
+    height: 10vh;
     top: 0;
     z-index: 998;
 }
@@ -64,6 +63,7 @@ body {
 
 footer * {
     font-size: 1.5rem;
+    font-weight: 100;
     color: white;
     text-decoration: none;
 }
@@ -118,18 +118,25 @@ ion-icon {
     display: flex;
     align-items: center;
     font-size: 5rem;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 45rem;
     font: bold;
     font-family: 'Righteous';
 }
-
+.nav-header-content{
+    display: flex;
+    align-items: center;
+}
 .containner-nav-header .inner-nav-header li,
-.inner-nav-header a {
+.inner-nav-header a,
+.containner-nav-header .r-menu-btn {
     list-style: none;
     text-decoration: none;
-    font-size: 6rem;
+    font-size: 5rem;
     color: wheat
+}
+.r-menu-btn {
+    display: none;
 }
 
 /* -- CONTAINER LINKS DE NAVEGAÇÃO */
@@ -187,7 +194,7 @@ ion-icon {
 .about-me-content p,
 .about-me-content strong {
     text-align: justify;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 1.5rem;
     font-family: 'Righteous';
 }
@@ -373,9 +380,10 @@ ion-icon[name='logo-whatsapp'] {
     fill: #25D366;
     /* Cor padrão do WhatsApp */
 }
+
 ion-icon[name='logo-nodejs'] {
     fill: #68A063;
-     /* Cor padrão do Node.js */
+    /* Cor padrão do Node.js */
 }
 
 
@@ -622,16 +630,7 @@ article .control-painel-containner .audio-content button {
 }
 
 /* -- SESSÃO DO CONTROLADOR DE ÁUDIO */
-/* -- CLASSES DE USABILIDADE -- */
-.hide {
-    display: none;
-}
 
-.show {
-    display: flex;
-}
-
-/* -- CLASSES DE USABILIDADE -- */
 /*  -- EFEITO DE FADE -- */
 .fade {
     opacity: 0;
@@ -772,6 +771,47 @@ article .control-painel-containner .audio-content button {
 
 @media screen and (min-width: 0px) and (max-width: 699px) {
 
+    .containner-nav-header {
+        padding: 0 5rem 0 0;
+        height: 8vh;
+    }
+    .nav-header-content{
+        display: none;
+
+    }
+    .containner-nav-header .inner-nav-header {
+        margin: 1rem;
+        width: 100%;
+    }
+    .containner-nav-header .inner-nav-header li {
+        margin-inline: .5rem;
+    }
+
+    .r-menu-btn {
+        position: absolute;
+        display: flex;
+        scale: 1.2;
+        margin: 0 2rem;
+        right: 0;
+    }
+
+    .home-content #type-effect {
+        font-size: 2rem;
+        height: 6rem;
+        text-align: center;
+    }
+
+    .home-content .subtittle,
+    .home-content .subtittle a {
+        font-size: 2rem;
+        width: 32rem;
+    }
+
+    #about .about-me-content * {
+        font-size: 2.5rem;
+        font-weight: 100;
+    }
+
     .card-projects-content .project-card {
         display: flex;
         min-width: 100%;
@@ -839,9 +879,10 @@ article .control-painel-containner .audio-content button {
         width: 77%;
         height: 70%;
     }
+
     article .fade-fullscreen .image-content-fullscreen img {
         object-fit: cover;
-        width: 40rem;
+        width: 31rem;
         height: 100%;
     }
 
@@ -862,6 +903,48 @@ article .control-painel-containner .audio-content button {
     }
 
 
+    /* -- BARRA DE FOOTER */
+    .footer {
+        position: absolute;
+        width: 100%;
+        padding-inline: 5%;
+        height: 25vh;
+        background-color: var(--set-web-color-p);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    footer * {
+        font-size: 1.2rem;
+    }
+
+    .footer span {
+        font-size: 1.2rem;
+    }
+
+    .footer .copyright-section span {
+        display: none;
+    }
+
+    .footer .copyright-section .contact-link {
+        font-size: 2rem;
+    }
+
+    .footer .copyright-section {
+        width: 50%;
+        height: 15vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    /*   ION-ICONS */
+    ion-icon {
+        font-size: 3rem;
+    }
+
+    /*   ION-ICONS */
 }
 
 @keyframes pop-tech {
@@ -873,7 +956,19 @@ article .control-painel-containner .audio-content button {
         transform: translateY(0rem);
     }
 }
+/* -- CLASSES DE USABILIDADE -- */
+.hide {
+    display: none;
+    animation: fade .5s alternate;
+}
 
+.show {
+    display: flex;
+    animation: fade .5s alternate;
+
+}
+
+/* -- CLASSES DE USABILIDADE -- */
 @keyframes fade {
     from {
         opacity: 0;
