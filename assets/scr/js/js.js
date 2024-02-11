@@ -138,7 +138,7 @@ const card = [
         info: 'Desenvolvido para o processo seletivo da Academia de Programação, este aplicativo simples permite aos usuários determinar o tipo de triângulo com base nos comprimentos dos lados fornecidos. Com uma interface intuitiva, o usuário insere os comprimentos dos lados e recebe instantaneamente uma classificação do triângulo como equilátero, isósceles ou escaleno. Além disso, o aplicativo verifica se os lados fornecidos formam um triângulo válido. É uma ferramenta prática e eficiente para identificar triângulos.',
         image: 'P-Chall-AP-1.jpg',
         repositorio: 'https://github.com/Kriegerl1/Chall1AcadProgram',
-        deploy: 'http://www.deploydo.site.com',
+        deploy: 'https://apdtt.netlify.app',
         tecnologias: ['css3', 'html5', 'javascript'],
         status: 'enable'
     }, {
@@ -147,8 +147,8 @@ const card = [
         subtitulo: 'Subtitulo do card 3',
         info: 'Card projeto 3 com Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consequatur amet quis dolorem blanditiis voluptates maiores quo placeat alias, omnis atque nihil delectus provident autem aut accusamus.',
         image: 'P-Chall-AP-2.jpg',
-        repositorio: 'https://github.com/Kriegerl1/Chall2AcadProgram',
-        deploy: 'http://www.deploydo.site.com',
+        repositorio: 'https://github.com/Kriegerl1/Chall2AcadProgram-',
+        deploy: 'https://ap2dtt.netlify.app',
         tecnologias: ['nodejs', 'css3', 'html5', 'javascript'],
         status: 'enable'
     }, {
