@@ -150,7 +150,7 @@ ion-icon {
     display: flex;
     height: auto;
     padding: 5rem 0;
-    margin: 10rem 5rem;
+    margin: 10rem;
     background-image: var(--set-section-bg-color);
     align-items: center;
     justify-content: center;
