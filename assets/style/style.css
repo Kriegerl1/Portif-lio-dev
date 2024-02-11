@@ -5,6 +5,7 @@
     font-size: 62.5%;
     box-sizing: border-box;
     font-family: "Righteous";
+
 }
 
 :root {
@@ -21,8 +22,6 @@
 /* -- CONFIGURAÇAO DE TAG NAME MAIOR -- */
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
-
 }
 
 body {
@@ -772,10 +771,26 @@ article .control-painel-containner .audio-content button {
     article .fade-fullscreen .image-content-fullscreen img {
         width: 40rem;
     }
-
+    .layout-section {
+        display: flex;
+        height: auto;
+        padding: 0 0 5rem 0;
+        margin: 12rem;
+        background-image: red;
+        align-items: center;
+        justify-content: center;
+        border: .1rem solid;
+        border-image: var(--set-border-section);
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 0px) and (max-width: 699px) {
+
+    .layout-section {
+        width: 100%;
+        overflow-x: hidden;
+    }
 
     #home,
     #about,
@@ -784,6 +799,8 @@ article .control-painel-containner .audio-content button {
     }
 
     .containner-nav-header {
+        margin: 0;
+        width: 100%;
         padding: 0 15% 0 0;
         height: 8vh;
     }
