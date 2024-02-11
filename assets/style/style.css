@@ -22,6 +22,7 @@
 /* -- CONFIGURAÇAO DE TAG NAME MAIOR -- */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -123,10 +124,12 @@ ion-icon {
     font: bold;
     font-family: 'Righteous';
 }
-.nav-header-content{
+
+.nav-header-content {
     display: flex;
     align-items: center;
 }
+
 .containner-nav-header .inner-nav-header li,
 .inner-nav-header a,
 .containner-nav-header .r-menu-btn {
@@ -135,6 +138,7 @@ ion-icon {
     font-size: 5rem;
     color: wheat
 }
+
 .r-menu-btn {
     display: none;
 }
@@ -771,18 +775,27 @@ article .control-painel-containner .audio-content button {
 
 @media screen and (min-width: 0px) and (max-width: 699px) {
 
+    #home,
+    #about,
+    #project {
+        font-size: 15rem;
+    }
+
     .containner-nav-header {
         padding: 0 5rem 0 0;
         height: 8vh;
     }
-    .nav-header-content{
+
+    .nav-header-content {
         display: none;
 
     }
+
     .containner-nav-header .inner-nav-header {
         margin: 1rem;
         width: 100%;
     }
+
     .containner-nav-header .inner-nav-header li {
         margin-inline: .5rem;
     }
@@ -855,12 +868,13 @@ article .control-painel-containner .audio-content button {
 
     .info-content-fullscreen .link-button-content button {
         text-decoration: none;
-        padding: 0rem 10%;
-        margin-left: 1rem;
     }
 
     .info-content-fullscreen .description-content-fullscreen p {
+        height: auto;
+        max-height: 15rem;
         font-size: 1.5rem;
+        overflow-y: scroll;
     }
 
     article .fade-fullscreen .fullscreen-inner-content {
@@ -889,6 +903,7 @@ article .control-painel-containner .audio-content button {
     article .fade-fullscreen .image-content-fullscreen {
         width: 100%;
         height: auto;
+        min-height: 10rem;
         overflow: hidden;
     }
 
@@ -956,6 +971,7 @@ article .control-painel-containner .audio-content button {
         transform: translateY(0rem);
     }
 }
+
 /* -- CLASSES DE USABILIDADE -- */
 .hide {
     display: none;
