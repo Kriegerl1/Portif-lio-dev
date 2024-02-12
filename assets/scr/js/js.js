@@ -340,14 +340,13 @@ function setCookie(nome, valor, dias){
 
 if (!document.cookie){
     setCookie("cookie", "1", 365);
-    document.write("<font face='verdana' size='1'>Suas Visitas : 1</font>");
+    document.write("Access Counter : 1 ");
     } else {
     var cont = document.cookie;
     var dividindo = cont.split("=");
-    //document.write(dividindo[1]);
     var numero = parseInt(dividindo[1]);
     var soma = numero + 1;
-    document.write("<font face='verdana' size='1'>Suas Visitas : " + soma + "</font>");
+    document.write("Access Counter : " + soma);
     setCookie("cookie", soma, 365);
     }
 
