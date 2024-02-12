@@ -43,7 +43,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0rem;
+    padding: 0 8rem;
     margin: 0 10rem 0rem 0;
     height: 10vh;
     top: 0;
