@@ -134,7 +134,7 @@ const card = [
     }, {
         id: 2,
         nome: 'Desafio 1',
-        subtitulo: 'Seletivo Academia de programação',
+        subtitulo: 'Processo Seletivo Academia de programação',
         info: 'Desenvolvido para o processo seletivo da Academia de Programação, este aplicativo simples permite aos usuários determinar o tipo de triângulo com base nos comprimentos dos lados fornecidos. Com uma interface intuitiva, o usuário insere os comprimentos dos lados e recebe instantaneamente uma classificação do triângulo como equilátero, isósceles ou escaleno. Além disso, o aplicativo verifica se os lados fornecidos formam um triângulo válido. É uma ferramenta prática e eficiente para identificar triângulos.',
         image: 'P-Chall-AP-1.jpg',
         repositorio: 'https://github.com/Kriegerl1/Chall1AcadProgram',
@@ -143,9 +143,9 @@ const card = [
         status: 'enable'
     }, {
         id: 3,
-        nome: 'Card projeto 3',
-        subtitulo: 'Subtitulo do card 3',
-        info: 'Card projeto 3 com Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consequatur amet quis dolorem blanditiis voluptates maiores quo placeat alias, omnis atque nihil delectus provident autem aut accusamus.',
+        nome: 'Desafio 2',
+        subtitulo: 'Processo Seletivo Academia de programação',
+        info: 'O código representa o Teste 2 da academia de programação, demonstrando um sistema de gerenciamento de estoque e serviços com operações CRUD. Os usuários interagem com uma interface para criar, visualizar, atualizar e excluir itens. Os dados são armazenados e processados no backend, com validações e feedback visual fornecidos na interface do usuário.',
         image: 'P-Chall-AP-2.jpg',
         repositorio: 'https://github.com/Kriegerl1/Chall2AcadProgram-',
         deploy: 'https://ap2dtt.netlify.app',
