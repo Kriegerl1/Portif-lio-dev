@@ -43,9 +43,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0rem;
-    margin: 0 10rem 0rem 0;
-    height: 10vh;
+    padding: 0 8rem;
+    height: 7vh;
     top: 0;
     z-index: 998;
 }
@@ -200,7 +199,7 @@ ion-icon {
 .about-me-content strong {
     text-align: justify;
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: 'Righteous';
 }
 
