@@ -27,7 +27,6 @@ html {
 body {
     background-image: var(--set-web-bg-color);
     height: auto;
-    margin-bottom: 35vh;
     overflow: var(--set-body-overflow);
 }
 
@@ -53,7 +52,7 @@ body {
 
 /* -- BARRA DE FOOTER */
 .footer {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 25vh;
     background-color: var(--set-web-color-p);
@@ -161,7 +160,8 @@ ion-icon {
 
 #home,
 #about,
-#project {
+#project,
+#xp-techs {
     font-size: 20rem;
     color: var(--set-web-font-color);
 }
@@ -943,8 +943,13 @@ article .control-painel-containner .audio-content button {
         height: 25vh;
         background-color: var(--set-web-color-p);
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: space-between;
+    }
+    .footer hr {
+    width: 90%;
+    height: .1rem;
     }
 
     footer * {
@@ -959,15 +964,22 @@ article .control-painel-containner .audio-content button {
         display: none;
     }
 
+    .footer .contact-section {
+        width: 90%;
+    }
     .footer .copyright-section .contact-link {
         font-size: 2rem;
     }
 
+    .footer .copyright-section img{
+        margin-left: -10rem;
+    }
     .footer .copyright-section {
-        width: 50%;
+        width: 90%;
         height: 15vh;
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: space-evenly;
     }
 

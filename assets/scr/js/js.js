@@ -149,7 +149,7 @@ const card = [
         image: 'P-Chall-AP-2.jpg',
         repositorio: 'https://github.com/Kriegerl1/Chall2AcadProgram-',
         deploy: 'https://ap2dtt.netlify.app',
-        tecnologias: ['nodejs', 'css3', 'html5', 'javascript'],
+        tecnologias: ['css3', 'html5', 'javascript'],
         status: 'enable'
     }, {
         id: 4,
@@ -329,26 +329,3 @@ function lessSound() {
 // Controlador de música ambiente
 
 
-// contador de acessos teste
-
-function setCookie(nome, valor, dias){ 
-    diasms = (new Date()) .getTime() + 1000 * 3600 * 24 * dias; 
-    dias = new Date(diasms); 
-    expires = dias.toGMTString(); 
-    document.cookie = escape(nome) + "=" + escape(valor) + "; expires=" + expires; 
-    } 
-
-if (!document.cookie){
-    setCookie("cookie", "1", 365);
-    document.write("Access Counter : 1 ");
-    } else {
-    var cont = document.cookie;
-    var dividindo = cont.split("=");
-    var numero = parseInt(dividindo[1]);
-    var soma = numero + 1;
-    document.write("Access Counter : " + soma);
-    setCookie("cookie", soma, 365);
-    }
-
-
-// contador de acessos teste
