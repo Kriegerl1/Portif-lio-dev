@@ -78,6 +78,9 @@ footer * {
     height: 60%;
 }
 
+.footer .copyright-section br{
+    display: none;
+}
 .footer .copyright-section {
     height: 15vh;
     display: flex;
@@ -238,7 +241,7 @@ ion-icon {
 }
 
 .project-card:hover {
-    height: 30rem;
+    scale: 1.1;
     transition: 1.5s;
 
 }
@@ -249,7 +252,7 @@ ion-icon {
     position: relative;
     width: 40rem;
     max-width: 40%;
-    height: 20rem;
+    height: 30rem;
     align-items: center;
     background-image: var(--set-section-bg-color);
     border-radius: 1rem;
@@ -261,6 +264,7 @@ ion-icon {
 .project-card .demo-project-image {
     position: relative;
     border-radius: .5rem;
+    height: 100%;
     width: 100%;
     overflow: hidden;
 }
@@ -285,8 +289,9 @@ ion-icon {
 .project-card .demo-project-image img {
     width: 100%;
     height: 100%;
+    overflow: hidden;
     border-radius: 2rem;
-    object-fit: cover;
+    object-fit:cover;
 }
 
 .project-card:hover .info-project-content {
@@ -344,6 +349,79 @@ ion-icon {
 }
 
 /* -- CARD DEMONSTRATIVO DE PROJETO -- */
+
+
+/* -------------------------------------------------------------------------------------------------------------------- */
+
+/* CARD TECH  */
+
+.tech-card-containner {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: auto;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.card-tech {
+    position: relative;
+    height: 15rem;
+    margin: 1%;
+    width: 30%;
+}
+
+.card-tech input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: -1.5rem;
+    z-index: 2;
+    opacity: 0;
+}
+.card-tech .tech-info {
+    position: relative;
+    height: 4rem;
+    overflow: hidden;
+    font-size: 2.5rem;
+    border-radius: .7rem;
+    border: .1rem solid;
+    border-image: var(--set-section-color);
+    background-color: var(--set-section-color);
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    transition: all 1s;
+}
+
+.tech-card-containner input:checked+.tech-info {
+    background-color: rgb(36, 100, 238);
+    transition: all 1s;
+    height: 15rem;
+    padding: 1.5rem;
+
+}
+
+.card-tech .tech-info label{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.info-tech-description{
+    margin: 3rem;
+    border: .1rem solid;
+    border-color: var(--set-border-section);
+    padding: 5% 23%;
+    font-size: 2.5rem;
+}
+.card-tech ion-icon{
+    font-size: 5rem;
+}
+
+/* CARD TECH  */
+
+/* -------------------------------------------------------------------------------------------------------------------- */
+
 /* -- FILL DE TECHS -- */
 ion-icon[name='logo-css3'] {
     fill: #1572B6;
@@ -770,6 +848,7 @@ article .control-painel-containner .audio-content button {
     article .fade-fullscreen .image-content-fullscreen img {
         width: 40rem;
     }
+
     .layout-section {
         display: flex;
         height: auto;
@@ -785,6 +864,10 @@ article .control-painel-containner .audio-content button {
 }
 
 @media screen and (min-width: 0px) and (max-width: 699px) {
+
+    .footer .copyright-section br{
+        display: inline;
+    }
 
     .layout-section {
         width: 100%;
@@ -947,9 +1030,10 @@ article .control-painel-containner .audio-content button {
         align-items: center;
         justify-content: space-between;
     }
+
     .footer hr {
-    width: 90%;
-    height: .1rem;
+        width: 90%;
+        height: .1rem;
     }
 
     footer * {
@@ -967,13 +1051,15 @@ article .control-painel-containner .audio-content button {
     .footer .contact-section {
         width: 90%;
     }
+
     .footer .copyright-section .contact-link {
         font-size: 2rem;
     }
 
-    .footer .copyright-section img{
+    .footer .copyright-section img {
         margin-left: -10rem;
     }
+
     .footer .copyright-section {
         width: 90%;
         height: 15vh;

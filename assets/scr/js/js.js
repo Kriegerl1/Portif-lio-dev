@@ -67,12 +67,7 @@ audioPainel.addEventListener('click', (event) => {
 // Evento para abrir o controlador de som do Painel.
 
 // Evento de escrita "Olá Mundo"!
-
-let Texto = "</Olá Mundo!>";
-let divEscrita = document.querySelector("#type-effect");
-let velEscrita = 100;
-
-function Escrita(divEscrita, Texto, velEscrita) {
+function Escrita(divEscrita, Texto, velEscrita, delay) {
 
     setTimeout(() => {
         let letra = Texto.split("").reverse()
@@ -87,10 +82,16 @@ function Escrita(divEscrita, Texto, velEscrita) {
             divEscrita.innerHTML += proximaLetra
 
         }, velEscrita)
-    }, 2000)
+    }, delay)
 };
 
-Escrita(divEscrita, Texto, velEscrita);
+Escrita(document.querySelector("#type-effect"), "</Olá Mundo!>" , 100, 1000);
+
+Escrita(document.querySelector("#about-p1"), `Olá, eu sou Leonardo Rodrigues, mas você pode me chamar de Krieger. Tenho 26 anos sou de Santa Catarina, sou um entusiasta do mundo do desenvolvimento.` , 10, 3000);
+
+Escrita(document.querySelector("#about-p2"), `Minha paixão é o desenvolvimento backend, onde busco aplicar com criatividade e inovação para construir soluções robustas e eficientes.`, 10, 6000);
+
+Escrita(document.querySelector("#about-p3"), `Estou em constante busca por novos conhecimentos e desafios, sempre ansioso para explorar novas áreas de desenvolvimento. Acredito que a aprendizagem é uma jornada contínua e estou determinado a aplicar cada novo insight de maneira prática.`, 10, 9000);
 
 // Evento de escrita "Olá Mundo"!
 
