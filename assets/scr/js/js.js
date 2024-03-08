@@ -85,7 +85,7 @@ function Escrita(divEscrita, Texto, velEscrita, delay) {
     }, delay)
 };
 
-Escrita(document.querySelector("#type-effect"), "</Olá Mundo!>" , 100, 1000);
+Escrita(document.querySelector("#type-effect"), "</Olá Mundo!>" , 100, 3000);
 
 Escrita(document.querySelector("#about-p1"), `Olá, eu sou Leonardo Rodrigues, mas você pode me chamar de Krieger. Tenho 26 anos sou de Santa Catarina, sou um entusiasta do mundo do desenvolvimento.` , 10, 3000);
 
